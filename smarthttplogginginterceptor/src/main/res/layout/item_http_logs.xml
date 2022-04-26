@@ -1,36 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvRequestMethod"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:padding="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvRequestCode"
-        android:layout_width="50dp"
-        android:layout_height="match_parent"
-        android:padding="4dp"
-        app:layout_constraintStart_toEndOf="@+id/tvRequestMethod"
-        />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvRequestUrl"
+        android:id="@+id/tvRequestName"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:padding="4dp"
-        android:maxWidth="200dp"
-        android:minWidth="50dp"
-        android:ellipsize="start"
-        android:singleLine="true"
-        app:layout_constraintStart_toEndOf="@+id/tvRequestCode"
-        />
+        android:text="name"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvRequestStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRequestStatus"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:text="Status"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvRequestType"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tvRequestName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRequestType"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:text="Type"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvRequestInitiator"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tvRequestStatus" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRequestInitiator"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:text="Initiator"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvRequestSize"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tvRequestType" />
+
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRequestSize"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:text="Size"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvRequestTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tvRequestInitiator" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRequestTime"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:text="Time"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/tvRequestSize" />
+
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/tvRequestUrl"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:padding="4dp"-->
+    <!--        android:maxWidth="200dp"-->
+    <!--        android:minWidth="50dp"-->
+    <!--        android:ellipsize="start"-->
+    <!--        android:singleLine="true"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tvRequestCode"-->
+    <!--        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
